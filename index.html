@@ -153,17 +153,6 @@
 
       .kontak-grid { flex-direction: column; align-items: center; }
       .kontak-kanan { justify-content: center; margin-top: 1.5rem; }
-      .animate {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.animate.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
     }
   </style>
 </head>
@@ -182,13 +171,13 @@
   </header>
 
   <main>
-    <section id="home" class="animate">
+    <section id="home" class="hero">
       <h1>Sigma Cipta Utama</h1>
       <p>The only oil and gas data management company in Indonesia which complies to government regulations and industrial standards.</p>
       <button onclick="scrollToSection()">Lihat Dashboard</button>
     </section>
 
-    <section id="dashboard" class="animate">
+    <section id="dashboard">
       <h2>Statistik Kerjasama</h2>
       <div class="chart-grid">
         <div>
@@ -205,9 +194,8 @@
         </div>
       </div>
     </section>
-    <br>
-    <br>
-    <section id="tentang" class="animate">
+
+    <section id="tentang">
       <h1>Tentang Kami</h1>
       <p><strong>Sigma Cipta Utama (SCU)</strong> adalah satu-satunya perusahaan manajemen data migas di Indonesia yang sepenuhnya mematuhi regulasi pemerintah dan standar industri.</p>
       <p>Sebagai anak perusahaan terpercaya dari PT Elnusa Tbk selama lebih dari 4 dekade, SCU telah menyediakan solusi terbaik dalam manajemen data dan teknologi ICT untuk industri minyak dan gas.</p>
@@ -220,9 +208,8 @@
         <li>Berkomitmen untuk kemajuan Indonesia melalui teknologi informasi.</li>
       </ul>
     </section>
-    <br>
-    <br>
-    <section id="layanan" class="animate">
+
+    <section id="layanan">
       <h1>🛠️ Layanan Kami</h1>
       <div class="layanan">
         <h3>🌐 Internet of Things (IoT)</h3>
@@ -241,9 +228,8 @@
         <p>Optimalkan pengambilan keputusan melalui analisis dan tata kelola data.</p>
       </div>
     </section>
-    <br>
-    <br>
-    <section id="kontak" class="animate">
+
+    <section id="kontak" class="kontak-grid">
       <div class="kontak-kiri">
         <h1>📬 Hubungi Saya</h1>
         <h3>🧑‍💼 Informasi Kontak</h3>
@@ -260,9 +246,8 @@
         <img src="profil.jpeg" alt="Foto Profil" />
       </div>
     </section>
-    <br>
-    <br>
-    <section id="tutorial" class="animate">
+
+    <section id="tutorial">
       <h1>📘 Tutorial Hosting Gratis di GitHub Pages</h1>
       <h2>Langkah 1: Membuat Repository</h2>
       <p>Buka <a href="https://github.com" target="_blank">github.com</a> dan login. Klik tombol <strong>New Repository</strong>.</p>
@@ -354,23 +339,6 @@
         }}
       }}
     }});
-    <script>
-  // Fade-in animation on scroll
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
-    });
-  }, {
-    threshold: 0.15
-  });
-
-  document.querySelectorAll('.animate').forEach(section => {
-    observer.observe(section);
-  });
-</script>
-
   </script>
 </body>
 </html>
